@@ -2,6 +2,8 @@
 
 Simple instructions to enable multithreading on Windows with `clang-cl` and Microsoft Visual Studio C++ build tools 
 
+Notice! These instructions need proper user privileges (administrative privileges) for installing Build Tools for Visual Studio 2017.
+
 ### 1. Get Build Tools for Visual Studio 2017.
 
 Follow instructions found in https://wiki.python.org/moin/WindowsCompilers
