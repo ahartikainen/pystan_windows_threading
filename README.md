@@ -34,6 +34,10 @@ To list all available environments
 ### 4. Activate environment `stan_clang`
 
     conda activate stan_clang
+    
+For older conda distributions use
+
+    activate stan_clang
 
 ### 5. Install PyStan
 	
