@@ -34,7 +34,7 @@ Toolset I frequently use
 	
 Minimum
   
-    pip install pystan arviz
+    pip install pystan
 
 Install arviz for visualization
 
@@ -59,3 +59,25 @@ Done. Follow official instructions to enable multithreading on PyStan.
 
 https://pystan.readthedocs.io/en/latest/threading_support.html
 
+### Commands
+
+Minimum workflow
+
+    conda create -n stan_clang python=3.6 numpy cython clangdev -c conda-forge
+    conda activate stan_clang
+    pip install pystan
+    git clone https://github.com/ahartikainen/pystan_windows_threading
+    cd pystan_windows_threading
+    step_1_add_distutils_cfg.bat
+    step_2_enable_clangcl.bat
+
+
+Suggested workflow
+
+    conda create -n stan_clang python=3.6 numpy cython matplotlib scipy jupyter jupyterlab notebook ipython xarray netcdf4 openpyxl xlrd pandas clangdev -c conda-forge
+    conda activate stan_clang
+    pip install pystan arviz
+    git clone https://github.com/ahartikainen/pystan_windows_threading
+    cd pystan_windows_threading
+    step_1_add_distutils_cfg.bat
+    step_2_enable_clangcl.bat
