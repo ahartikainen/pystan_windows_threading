@@ -1,36 +1,41 @@
-# pystan_windows_threading
-Simple instructions to enable multithreading on Windows with clang-cl and Microsoft Visual Studio C++ build tools 
+# Enable Threading on Windows for PyStan 2.18+
 
-## Get Build Tools for Visual Studio 2017.
+Simple instructions to enable multithreading on Windows with `clang-cl` and Microsoft Visual Studio C++ build tools 
+
+### 1. Get Build Tools for Visual Studio 2017.
 
 Follow instructions found in https://wiki.python.org/moin/WindowsCompilers
 
-'Build Tools for Visual Studio 2017' https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017
+Build Tools for Visual Studio 2017 https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017
 
 Install the defaults and restart computer
 
-## Get Anaconda or Miniconda distribution
+### 2. Get Anaconda or Miniconda distribution
 
 Anaconda https://www.anaconda.com/download/#windows
 Miniconda https://conda.io/miniconda.html
 
-## Create conda-env
+### 3. Create Conda virtual environment
 
-Example lines use 3.6, but feel free to use 3.7 instead. 
+Example uses Python 3.6, but feel free to use Python 3.7 instead. 
 
 Minimum
 
     conda create -n stan_clang python=3.6 numpy cython clangdev -c conda-forge
 
-Toolset I frequently use
+Toolset I frequently use (JupyterLab + Excel tools + tools for ArviZ)
 
     conda create -n stan_clang python=3.6 numpy cython matplotlib scipy jupyter jupyterlab notebook ipython xarray netcdf4 openpyxl xlrd pandas clangdev -c conda-forge
+    
+To list all available environments
 
-## Activate environment `stan_clang`
+    conda env list
+
+### 4. Activate environment `stan_clang`
 
     conda activate stan_clang
 
-## Install pystan
+### 5. Install PyStan
 	
 Minimum
   
@@ -40,7 +45,7 @@ Install arviz for visualization
 
     pip install pystan arviz
 
-## Get files to enable clang
+### 6. Get files to enable clang
 
 Clone `pystan_windows_threading`
 
