@@ -93,3 +93,31 @@ Suggested workflow
     step_1_add_distutils_cfg.bat
     step_2_enable_clangcl.bat
     pip install pystan arviz
+
+## Create `run_all.bat` file and call it from cmd
+
+Minimum workflow
+
+```
+conda create -n stan_clang python=3.6 numpy cython clangdev git -c conda-forge -y && conda activate stan_clang && ^
+git clone https://github.com/ahartikainen/pystan_windows_threading && ^
+cd pystan_windows_threading && ^
+step_1_add_distutils_cfg.bat && ^
+step_2_enable_clangcl.bat && ^
+pip install pystan
+```    
+Suggested workflow
+
+```
+conda create -n stan_clang python=3.6 numpy cython matplotlib scipy jupyter jupyterlab notebook ipython xarray netcdf4 openpyxl xlrd pandas clangdev git -c conda-forge -y && ^
+conda activate stan_clang && ^
+git clone https://github.com/ahartikainen/pystan_windows_threading && ^
+cd pystan_windows_threading && ^
+step_1_add_distutils_cfg.bat && ^
+step_2_enable_clangcl.bat && ^
+pip install pystan arviz
+```
+
+Run batch file
+
+    run_all.bat
