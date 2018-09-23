@@ -82,7 +82,7 @@ Minimum workflow
     cd pystan_windows_threading
     step_1_add_distutils_cfg.bat
     step_2_enable_clangcl.bat
-    pip install pystan -y
+    pip install pystan
     
 Suggested workflow
 
@@ -92,4 +92,4 @@ Suggested workflow
     cd pystan_windows_threading
     step_1_add_distutils_cfg.bat
     step_2_enable_clangcl.bat
-    pip install pystan arviz -y
+    pip install pystan arviz
