@@ -41,17 +41,7 @@ For older conda distributions use
 
     activate stan_clang
 
-### 5. Install PyStan
-	
-Minimum
-  
-    pip install pystan
-
-Install arviz for visualization
-
-    pip install pystan arviz
-
-### 6. Get files to enable clang
+### 5. Get files to enable clang
 
 Clone `pystan_windows_threading`
 
@@ -65,7 +55,19 @@ Add clang-cl compiler option to `distutils.cfg`
 Replace `_msvccompiler.py` & `ccompiler.py` with clang-cl enabled files
 
     step_2_enable_clangcl.bat
+
+### 6. Install PyStan
 	
+Minimum
+  
+    pip install pystan
+
+Install arviz for visualization
+
+    pip install pystan arviz
+
+
+
 Done. Follow official instructions to enable multithreading on PyStan.
 
 https://pystan.readthedocs.io/en/latest/threading_support.html
@@ -74,21 +76,20 @@ https://pystan.readthedocs.io/en/latest/threading_support.html
 
 Minimum workflow
 
-    conda create -n stan_clang python=3.6 numpy cython clangdev -c conda-forge
+    conda create -n stan_clang python=3.6 numpy cython clangdev git -c conda-forge -y
     conda activate stan_clang
-    pip install pystan
     git clone https://github.com/ahartikainen/pystan_windows_threading
     cd pystan_windows_threading
     step_1_add_distutils_cfg.bat
     step_2_enable_clangcl.bat
-
-
+    pip install pystan -y
+    
 Suggested workflow
 
-    conda create -n stan_clang python=3.6 numpy cython matplotlib scipy jupyter jupyterlab notebook ipython xarray netcdf4 openpyxl xlrd pandas clangdev -c conda-forge
+    conda create -n stan_clang python=3.6 numpy cython matplotlib scipy jupyter jupyterlab notebook ipython xarray netcdf4 openpyxl xlrd pandas clangdev git -c conda-forge -y
     conda activate stan_clang
-    pip install pystan arviz
     git clone https://github.com/ahartikainen/pystan_windows_threading
     cd pystan_windows_threading
     step_1_add_distutils_cfg.bat
     step_2_enable_clangcl.bat
+    pip install pystan arviz -y
