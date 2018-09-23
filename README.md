@@ -99,7 +99,8 @@ Suggested workflow
 Minimum workflow
 
 ```
-conda create -n stan_clang python=3.6 numpy cython clangdev git -c conda-forge -y && conda activate stan_clang && ^
+conda create -n stan_clang python=3.6 numpy cython clangdev git -c conda-forge -y && ^
+conda activate stan_clang && ^
 git clone https://github.com/ahartikainen/pystan_windows_threading && ^
 cd pystan_windows_threading && ^
 step_1_add_distutils_cfg.bat && ^
